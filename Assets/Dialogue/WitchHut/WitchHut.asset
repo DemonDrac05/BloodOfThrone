@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac2a85dbab59ff45a40fc81ba85f4b5, type: 3}
+  m_Name: WitchHut
+  m_EditorClassIdentifier: 
+  dialogues:
+  - Character: 1
+    Text: "Hello, my name is Evan Will, I\u2019m the guardian of Prince Cassiel,
+      from Wallington\u2019s royal family. We are lost in these woods, and want to
+      ask you for help to find the way back to the Kingdom?"
+    isQuestion: 0
+    Choices: []
+  - Character: 3
+    Text: "Hello travelers, my name is Helga, I don\u2019t remember the last time
+      I met people around. It will be my pleasure to help you! It\u2019s only two
+      ways: through the Cave of Lost Souls, in which better not to go by legends,
+      \r\nor make a big hook around the cave through the forest."
+    isQuestion: 1
+    Choices:
+    - ChoiceText: Hmm, the proposal with the cave seems fast!
+      AnswerText: 
+      NextDialogue: {fileID: 11400000, guid: eb69e136ebe407341926614c6557b0cc, type: 2}
+    - ChoiceText: Okay, it seems the safest way is around the cave.
+      AnswerText: 
+      NextDialogue: {fileID: 11400000, guid: 654ac0abd0438bb4cab16145b3638c0a, type: 2}

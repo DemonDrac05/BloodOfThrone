@@ -1,26 +1,65 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class JumpState : PlayerState
 {
-    private new Player player;
+    // --- MOVEMENT PROPERTIES ----------
+    private float jumpForce;
+
+    // --- SINGLETON CLASS ----------
+    private PlayerMovement playerMovement;
+    private PlayerPhysics playerPhysics;
+
+    private AnimatorStateInfo currentAnimatorState;
 
     public JumpState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
-        this.player = player;
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerPhysics = player.GetComponent<PlayerPhysics>();
+
+        jumpForce = playerMovement.jumpForce;
+    }
+
+    public override void EnterState()
+    {
+        player.Animator.Play(playerMovement.posX == 0 ? "ReadyToJump" : "Jump");
     }
 
     public override void FrameUpdate()
     {
-        if (!player.IsGrounded())
+        currentAnimatorState = player.Animator.GetCurrentAnimatorStateInfo(0);
+
+        MovePlayer();
+        if (playerPhysics.IsGrounded()) ChangeState();
+    }
+
+    private void MovePlayer()
+    {
+        if (playerPhysics.IsGrounded())
         {
-            player.animator.Play("Jump");
+            if (currentAnimatorState.IsName("Fall"))
+            {
+                player.Animator.SetTrigger("Land");
+            }
+            if (currentAnimatorState.IsName("IdleCombat"))
+            {
+                player.stateMachine.ChangeState(player.moveState);
+            }
         }
         else
         {
-            player.stateMachine.ChangeState(player.moveState);
+            string animation = player.Rigidbody2D.linearVelocity.y > .1f ? "Jump" : "Fall";
+            if (animation == "Fall" && currentAnimatorState.IsName("Jump"))
+            {
+                player.Animator.SetTrigger("Fall");
+            }
+        }
+    }
+
+    private void ChangeState()
+    {
+        if (currentAnimatorState.IsName("Jump"))
+        {
+            player.Rigidbody2D.linearVelocity = new Vector2(player.Rigidbody2D.linearVelocity.x, jumpForce);
         }
     }
 }

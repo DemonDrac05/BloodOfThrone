@@ -4,58 +4,79 @@ using UnityEngine;
 
 public class MoveState : PlayerState
 {
-    private new Player player;
-
+    // --- MOVEMENT PROPERTIES ----------
     private float moveSpeed;
     private float jumpForce;
 
+    // --- ANIMATION NAME ----------
+    private const string Idle = "Idle";
+    private const string Run = "Run";
+
+    // --- ANIMATION NAME ----------
+    private const string IsRunning = "isRunning";
+    private const string IsJumping = "isJumping";
+    private const string TriggerAttack = "Attack";
+
+    // --- SINGLETON CLASS ----------
+    private PlayerMovement playerMovement;
+    private PlayerPhysics playerPhysics;
+
     public MoveState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
-        this.player = player;
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerPhysics = player.GetComponent<PlayerPhysics>();
 
-        this.moveSpeed = player.moveSpeed;
-        this.jumpForce = player.jumpForce;
+        moveSpeed = playerMovement.moveSpeed;
+        jumpForce = playerMovement.jumpForce;
     }
 
     public override void EnterState()
     {
-        player.AllowToFlip = true;
+        player.SetFlip(true);
     }
 
     public override void ExitState()
     {
-        player.AllowToFlip = false;
+        player.SetFlip(false);
     }
 
     public override void FrameUpdate()
     {
-        if (player.IsGrounded())
+        MovePlayer();
+        if (playerPhysics.IsGrounded()) ChangeState();
+    }
+
+    private void MovePlayer()
+    {
+        if (playerPhysics.IsGrounded())
         {
-            if (player.posX != 0)
+            if (playerMovement.posX != 0)
             {
-                player.animator.Play("Run");
-                player.rb2d.linearVelocityX = player.posX * moveSpeed;
+                player.Animator.SetBool(IsRunning, true);
+                player.Rigidbody2D.linearVelocityX = playerMovement.posX * moveSpeed;
             }
-            else 
+            else
             {
-                player.animator.Play("Idle");
-                player.rb2d.linearVelocityX = 0f;
+                player.Animator.SetBool(IsRunning, false);
+                player.Rigidbody2D.linearVelocityX = 0f;
             }
         }
-        ChangeState();
     }
 
     private void ChangeState()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.rb2d.linearVelocity = new Vector2(player.rb2d.linearVelocity.x, jumpForce);
             player.stateMachine.ChangeState(player.jumpState);
         }
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            player.rb2d.linearVelocity = Vector2.zero;
             player.stateMachine.ChangeState(player.attackState);
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            player.Animator.SetTrigger("Block");
+            player.stateMachine.ChangeState(player.blockState);
         }
     }
 }

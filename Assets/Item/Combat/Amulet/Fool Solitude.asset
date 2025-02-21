@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b6978ce8d28cf489fff1c2c6d2d0e3, type: 3}
+  m_Name: Fool Solitude
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  buyingPrice: -1
+  sellingPrice: -1
+  RarityType: 0
+  itemDescription: 
+  itemMainUse: 
+  isPurchaseable: 0
+  CombatItemType: 4
+  currentLevel: 0
+  Statistics:
+  - Type: 10
+    ValueType: 0
+    Value: 0.1
+  - Type: 11
+    ValueType: 0
+    Value: 0.1

@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Playables;
-
-public class EnemyStateMachine : MonoBehaviour
+public class EnemyStateMachine
 {
     public EnemyState enemyState;
 
@@ -18,5 +13,11 @@ public class EnemyStateMachine : MonoBehaviour
         enemyState.ExitState();
         enemyState = nextState;
         enemyState.EnterState();
+    }
+
+    public bool GetCurrentState(EnemyState currentState)
+    {
+        if (enemyState == currentState) return true;
+        return false;
     }
 }

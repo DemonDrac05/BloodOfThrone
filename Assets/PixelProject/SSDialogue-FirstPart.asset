@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f496ac864516c43891a08208be796f, type: 3}
+  m_Name: SSDialogue-FirstPart
+  m_EditorClassIdentifier: 
+  SSDialogueLines:
+  - Character: 0
+    Text: Those planets out there enthuse me in a speechless way. They are mysterious
+      to our human existence for thousands of years.
+  - Character: 1
+    Text: "Have you still remembered our home, Evelyn? The planet \u2026 where we
+      couldn\u2019t even protect it for only once \u2026 *choke* \u2026\r"
+  - Character: 0
+    Text: "15 years have already passed and I couldn\u2019t imagine what it looked
+      like out there. I recalled that I was lucky enough to get on the final spaceship
+      to this planet."
+  - Character: 1
+    Text: "Look at the [location], you will find it, my dear\u2026\r"

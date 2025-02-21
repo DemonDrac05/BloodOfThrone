@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6940cdda447048efa58605bd546f9920, type: 3}
+  m_Name: TheLoathe
+  m_EditorClassIdentifier: 
+  Frames:
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 60aa2dd8ef1080a46809b4b4816da0cc, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: a44530280a7c8c94780e673ca2b30cc5, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 25dfea9b2b91fa4478e698cef6d9d3fb, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 4df7d568384fadc42aac67efaf2ef76c, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: c703c8dca63ae4b44bb7158bfa7cd0f9, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: a91a124ec23c2094cab48f45175d5491, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 6f38e8c319d15ac49bd3fea76d1b84a7, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 43f6096b50ec52641a380cab7f6a08b6, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 36c5f81d48b37f343871624616f4f3ed, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 017919e7b620f8743acf382d9c013983, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 184b0537f55cf424b820ac3a532d2c25, type: 3}

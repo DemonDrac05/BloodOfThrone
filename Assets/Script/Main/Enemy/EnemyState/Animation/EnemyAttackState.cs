@@ -4,49 +4,42 @@ using UnityEngine;
 
 public class EnemyAttackState : EnemyState
 {
-    protected new Enemy enemy;
+    private EnemyCombat EnemyCombat;
+    private Henchman Henchman;
 
-    private float attackTime;
-    private float attackDuration = 0.75f;
-
+    private bool performAttacked;
     public EnemyAttackState(Enemy enemy, EnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
-        this.enemy = enemy;
+        EnemyCombat = enemy.GetComponent<EnemyCombat>();
+        if (enemy is Henchman) Henchman = (Henchman)enemy;
     }
 
     public override void EnterState()
     {
-        attackTime = attackDuration;
-        enemy.rb2d.bodyType = RigidbodyType2D.Kinematic;
+        enemy.SetVulnerable(true);
+        performAttacked = false;
     }
 
     public override void ExitState()
     {
-        enemy.attackCDTime = enemy.attackCDDuration;
-        enemy.rb2d.bodyType = RigidbodyType2D.Dynamic;
+        if (Henchman != null) Henchman.SetActionCooldown();
+        performAttacked = false;
     }
 
     public override void FrameUpdate()
     {
-        if(attackTime < 0f)
+        if (!enemy.Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            attackTime = 0f;
-            
-        }
-        if(attackTime == 0f)
-        {
-            enemy.stateMachine.ChangeState(enemy.idleState);
+            enemy.stateMachine.ChangeState(enemy.EnemyIdleState);
         }
     }
 
     public override void PhysicsUpdate()
     {
-        if (attackTime > 0f)
+        if (EnemyCombat.ActivateAttackPoint() && !performAttacked)
         {
-            attackTime -= Time.deltaTime;
-            enemy.animator.Play("attack");
+            performAttacked = true;
+            EnemyCombat.TriggerAttack(7.5f);
         }
-
-        enemy.rb2d.linearVelocity = Vector2.zero;
     }
 }

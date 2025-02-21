@@ -1,0 +1,438 @@
+fileFormatVersion: 2
+guid: 685fd6fe56c0ed74181b13362eaec89e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8462643125801362939
+    second: AttackAnimationMC-SpriteSheet(140x140)_0
+  - first:
+      213: 1152550840401676794
+    second: AttackAnimationMC-SpriteSheet(140x140)_1
+  - first:
+      213: 9212130300487124928
+    second: AttackAnimationMC-SpriteSheet(140x140)_2
+  - first:
+      213: 4373150020464063145
+    second: AttackAnimationMC-SpriteSheet(140x140)_3
+  - first:
+      213: 5226698508149133788
+    second: AttackAnimationMC-SpriteSheet(140x140)_4
+  - first:
+      213: 2789000701427231248
+    second: AttackAnimationMC-SpriteSheet(140x140)_5
+  - first:
+      213: -398609454912193678
+    second: AttackAnimationMC-SpriteSheet(140x140)_6
+  - first:
+      213: -1169902872592556247
+    second: AttackAnimationMC-SpriteSheet(140x140)_7
+  - first:
+      213: 6051806406061727243
+    second: AttackAnimationMC-SpriteSheet(140x140)_8
+  - first:
+      213: 8218460146361151634
+    second: AttackAnimationMC-SpriteSheet(140x140)_9
+  - first:
+      213: 2245191519348002134
+    second: AttackAnimationMC-SpriteSheet(140x140)_10
+  - first:
+      213: -8492625829959086255
+    second: AttackAnimationMC-SpriteSheet(140x140)_11
+  - first:
+      213: -7498467206842474207
+    second: AttackAnimationMC-SpriteSheet(140x140)_12
+  - first:
+      213: -4214231620080508584
+    second: AttackAnimationMC-SpriteSheet(140x140)_13
+  - first:
+      213: -5491698718339102723
+    second: AttackAnimationMC-SpriteSheet(140x140)_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5aa4ef519517570800000000000000
+      internalID: 8462643125801362939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 280
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af948b302eeaeff00800000000000000
+      internalID: 1152550840401676794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 280
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7c52943bf08df70800000000000000
+      internalID: 9212130300487124928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 280
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2b04f06cc80bc30800000000000000
+      internalID: 4373150020464063145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd11b46d996f88840800000000000000
+      internalID: 5226698508149133788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 140
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01aa2e67c5584b620800000000000000
+      internalID: 2789000701427231248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_6
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 140
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bb8db00dad77af0800000000000000
+      internalID: -398609454912193678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_7
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 140
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f5969298ba3cfe0800000000000000
+      internalID: -1169902872592556247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e1ebaccd55cf350800000000000000
+      internalID: 6051806406061727243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290bf88b5f5dd0270800000000000000
+      internalID: 8218460146361151634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d05739ac5882f10800000000000000
+      internalID: 2245191519348002134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackAnimationMC-SpriteSheet(140x140)_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 140
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f4bf2bdc1242a80800000000000000
+      internalID: -8492625829959086255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4ee3731068c025f4e830c54674436b5c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AttackAnimationMC-SpriteSheet(140x140)_0: 8462643125801362939
+      AttackAnimationMC-SpriteSheet(140x140)_1: 1152550840401676794
+      AttackAnimationMC-SpriteSheet(140x140)_10: 2245191519348002134
+      AttackAnimationMC-SpriteSheet(140x140)_11: -8492625829959086255
+      AttackAnimationMC-SpriteSheet(140x140)_2: 9212130300487124928
+      AttackAnimationMC-SpriteSheet(140x140)_3: 4373150020464063145
+      AttackAnimationMC-SpriteSheet(140x140)_4: 5226698508149133788
+      AttackAnimationMC-SpriteSheet(140x140)_5: 2789000701427231248
+      AttackAnimationMC-SpriteSheet(140x140)_6: -398609454912193678
+      AttackAnimationMC-SpriteSheet(140x140)_7: -1169902872592556247
+      AttackAnimationMC-SpriteSheet(140x140)_8: 6051806406061727243
+      AttackAnimationMC-SpriteSheet(140x140)_9: 8218460146361151634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

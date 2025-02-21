@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyState : MonoBehaviour
+public class EnemyState
 {
     protected Enemy enemy;
     protected EnemyStateMachine stateMachine;

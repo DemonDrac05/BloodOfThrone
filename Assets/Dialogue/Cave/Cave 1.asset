@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac2a85dbab59ff45a40fc81ba85f4b5, type: 3}
+  m_Name: Cave 1
+  m_EditorClassIdentifier: 
+  dialogues:
+  - Character: 1
+    Text: Look, it's so beatiful place!
+    isQuestion: 0
+    Choices: []
+  - Character: 2
+    Text: Hmm, I don't think so... It looks scary. There is something wrong with
+      this place!
+    isQuestion: 0
+    Choices: []
+  - Character: 1
+    Text: Don't worry, let's take some rest and explore the cave!
+    isQuestion: 0
+    Choices: []

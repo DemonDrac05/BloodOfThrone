@@ -1,0 +1,594 @@
+fileFormatVersion: 2
+guid: d2e790a9ed6171345a1450b313b0f663
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4587655849117167896
+    second: Dying(Hench)-SpriteSheetx140_0
+  - first:
+      213: 2433198865570851561
+    second: Dying(Hench)-SpriteSheetx140_1
+  - first:
+      213: 2601421636995447307
+    second: Dying(Hench)-SpriteSheetx140_2
+  - first:
+      213: -3644625207345221835
+    second: Dying(Hench)-SpriteSheetx140_3
+  - first:
+      213: 569548338357210152
+    second: Dying(Hench)-SpriteSheetx140_4
+  - first:
+      213: -5069362053457923600
+    second: Dying(Hench)-SpriteSheetx140_5
+  - first:
+      213: 7014759774866681504
+    second: Dying(Hench)-SpriteSheetx140_6
+  - first:
+      213: 6941261415855257307
+    second: Dying(Hench)-SpriteSheetx140_7
+  - first:
+      213: 8649138109987410571
+    second: Dying(Hench)-SpriteSheetx140_8
+  - first:
+      213: 697131079605297171
+    second: Dying(Hench)-SpriteSheetx140_9
+  - first:
+      213: 3352356849331841691
+    second: Dying(Hench)-SpriteSheetx140_10
+  - first:
+      213: -2205767983013050802
+    second: Dying(Hench)-SpriteSheetx140_11
+  - first:
+      213: -4688451876955862787
+    second: Dying(Hench)-SpriteSheetx140_12
+  - first:
+      213: -1846800066441813790
+    second: Dying(Hench)-SpriteSheetx140_13
+  - first:
+      213: -2923822756107779545
+    second: Dying(Hench)-SpriteSheetx140_14
+  - first:
+      213: -495494870314106900
+    second: Dying(Hench)-SpriteSheetx140_15
+  - first:
+      213: 6191396396772119131
+    second: Dying(Hench)-SpriteSheetx140_16
+  - first:
+      213: 3890565524223287086
+    second: Dying(Hench)-SpriteSheetx140_17
+  - first:
+      213: 5906835752513858930
+    second: Dying(Hench)-SpriteSheetx140_18
+  - first:
+      213: -8936246896148622289
+    second: Dying(Hench)-SpriteSheetx140_19
+  - first:
+      213: -1046975894487784999
+    second: Dying(Hench)-SpriteSheetx140_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eec0a9cf4f5550c0800000000000000
+      internalID: -4587655849117167896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 420
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eaeb320a7574c120800000000000000
+      internalID: 2433198865570851561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 420
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0af028223b1a1420800000000000000
+      internalID: 2601421636995447307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 420
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53fe0c81fa0bb6dc0800000000000000
+      internalID: -3644625207345221835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_4
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 420
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c0236323177e700800000000000000
+      internalID: 569548338357210152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1bbcd221206a9b0800000000000000
+      internalID: -5069362053457923600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 280
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aea0a579de695160800000000000000
+      internalID: 7014759774866681504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 280
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd67d293b70545060800000000000000
+      internalID: 6941261415855257307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_8
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 280
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b82d7133949e70870800000000000000
+      internalID: 8649138109987410571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 280
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31022c9f505bca900800000000000000
+      internalID: 697131079605297171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9aa5ccfac6f58e20800000000000000
+      internalID: 3352356849331841691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 140
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46c393c4b98361e0800000000000000
+      internalID: -2205767983013050802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_12
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 140
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8488fbbd54feeb0800000000000000
+      internalID: -4688451876955862787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 140
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e06194df19de56e0800000000000000
+      internalID: -1846800066441813790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_14
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 140
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7220ef3c1be7c67d0800000000000000
+      internalID: -2923822756107779545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef36ea6a06af19f0800000000000000
+      internalID: -495494870314106900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b525c3d28324ce550800000000000000
+      internalID: 6191396396772119131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dying(Hench)-SpriteSheetx140_17
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fd5be2bb01ef530800000000000000
+      internalID: 3890565524223287086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9265ff8e4f1822540971ac890d48106a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dying(Hench)-SpriteSheetx140_0: -4587655849117167896
+      Dying(Hench)-SpriteSheetx140_1: 2433198865570851561
+      Dying(Hench)-SpriteSheetx140_10: 3352356849331841691
+      Dying(Hench)-SpriteSheetx140_11: -2205767983013050802
+      Dying(Hench)-SpriteSheetx140_12: -4688451876955862787
+      Dying(Hench)-SpriteSheetx140_13: -1846800066441813790
+      Dying(Hench)-SpriteSheetx140_14: -2923822756107779545
+      Dying(Hench)-SpriteSheetx140_15: -495494870314106900
+      Dying(Hench)-SpriteSheetx140_16: 6191396396772119131
+      Dying(Hench)-SpriteSheetx140_17: 3890565524223287086
+      Dying(Hench)-SpriteSheetx140_2: 2601421636995447307
+      Dying(Hench)-SpriteSheetx140_3: -3644625207345221835
+      Dying(Hench)-SpriteSheetx140_4: 569548338357210152
+      Dying(Hench)-SpriteSheetx140_5: -5069362053457923600
+      Dying(Hench)-SpriteSheetx140_6: 7014759774866681504
+      Dying(Hench)-SpriteSheetx140_7: 6941261415855257307
+      Dying(Hench)-SpriteSheetx140_8: 8649138109987410571
+      Dying(Hench)-SpriteSheetx140_9: 697131079605297171
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

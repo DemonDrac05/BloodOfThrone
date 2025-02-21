@@ -1,92 +1,83 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IComponents, IVariables
 {
-    [Header("=== Player Properties ==========")]
-    [SerializeField] public float jumpForce = 14f;
-    [SerializeField] public float moveSpeed = 10f;
-    [SerializeField] public LayerMask Ground;
 
-    [HideInInspector] public float posX;
-    [HideInInspector] public float posY;
-    [HideInInspector] public bool IsFacingRight = true;
-    [HideInInspector] public bool AllowToFlip = true;
-    [HideInInspector] public Vector3 flip;
+    // --- PROPERTIES ----------
+    public bool IsVulnerable { get; private set; }
+    public bool IsGrounded { get; private set; }
+    public bool IsFlippable { get; private set; }
 
-    [HideInInspector] public Rigidbody2D rb2d;
-    [HideInInspector] public Collider2D playerCollider2D;
-    [HideInInspector] public Animator animator;
+    // --- ICOMPONENTS -----------
+    public Rigidbody2D Rigidbody2D { get; private set; }
+    public Collider2D Collider2D { get; private set; }
+    public Animator Animator { get; private set; }
 
-    [HideInInspector] public PlayerStateMachine stateMachine;
-    [HideInInspector] public MoveState moveState;
-    [HideInInspector] public JumpState jumpState;
-    [HideInInspector] public AttackState attackState;
+    public static AnimatorStateInfo CurrentState { get; private set; }
 
-    [HideInInspector] public static Player player;
+    // --- STATE MACHINE ----------
+    public PlayerStateMachine stateMachine { get; private set; }
+    public LifeState lifeState { get; private set; }
+    public MoveState moveState { get; private set; }
+    public JumpState jumpState { get; private set; }
+    public BlockState blockState { get; private set; }
+    public AttackState attackState { get; private set; }
+
+    // --- SINGLETON INSTANCE ----------
+    public static Player player { get; private set; }
 
     private void Awake()
     {
         player = this;
 
+        InitializeStateMachine();
+        InitializeComponents();
+    }
+
+    private void InitializeStateMachine()
+    {
+        // --- Initialize State Machine ------------
         stateMachine = new PlayerStateMachine();
+
+        // --- Initialize States ------------
+        lifeState = new LifeState(this, stateMachine);
         moveState = new MoveState(this, stateMachine);
         jumpState = new JumpState(this, stateMachine);
+
+        blockState = new BlockState(this, stateMachine);
         attackState = new AttackState(this, stateMachine);
     }
 
-    void Start()
+    private void InitializeComponents()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        playerCollider2D = GetComponent<Collider2D>();
-
-        stateMachine.Initialize(moveState);
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        Collider2D = GetComponent<Collider2D>();
+        Animator = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    private void Start()
     {
-        UpdateFlip();
-
-        stateMachine.playerState.PhysicsUpdate();
+        stateMachine.Initialize(moveState);
+        SetVulnerable(true);
     }
 
     private void Update()
     {
-        InputMovement(out posX, out posY);
-
+        CurrentState = Animator.GetCurrentAnimatorStateInfo(0);
         stateMachine.playerState.FrameUpdate();
     }
 
-    private void UpdateFlip()
+    private void FixedUpdate() => stateMachine.playerState.PhysicsUpdate();
+
+    public void SetVulnerable(bool vulnerable) => IsVulnerable = vulnerable;
+    public void SetGrounded(bool grounded) => IsGrounded = grounded;
+    public void SetFlip(bool flippable) => IsFlippable = flippable;
+
+    public void SetStateTrigger(string triggerAnimation, string triggerParameter)
     {
-        if (posX > 0 && !IsFacingRight)
+        if (!CurrentState.IsName(triggerAnimation))
         {
-            CheckIsFacingRight();
+            Animator.SetTrigger(triggerParameter);
         }
-        else if (posX < 0 && IsFacingRight)
-        {
-            CheckIsFacingRight();
-        }
-    }
-    public void CheckIsFacingRight()
-    {
-        if (!AllowToFlip) return;
-
-        IsFacingRight = !IsFacingRight;
-
-        flip = transform.localScale;
-        flip.x = -1;
-
-        float yRot = flip.x > 0 ? 0f : 180f;
-        transform.Rotate(0, yRot, 0);
-    }
-    public void InputMovement(out float horizontal, out float vertical)
-    {
-        horizontal = !AllowToFlip ? 0f : Input.GetAxisRaw("Horizontal");
-        vertical = !AllowToFlip ? 0f : Input.GetAxisRaw("Vertical");
-    }
-    public bool IsGrounded()
-    {
-        return Physics2D.BoxCast(playerCollider2D.bounds.center, playerCollider2D.bounds.size, 0f, Vector2.down, .1f, Ground);
     }
 }

@@ -4,79 +4,55 @@ using UnityEngine;
 
 public class EnemyChaseState : EnemyState
 {
-    protected new Enemy enemy;
-    protected Player player;
-
-    private float transformTime;
-    private float transformDuration = 0.5f;
-
+    private Henchman Henchman;
+    private Player Player;
     public EnemyChaseState(Enemy enemy, EnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
-        this.enemy = enemy;
-        this.player = FindObjectOfType<Player>();
+        if (enemy is Henchman) Henchman = (Henchman)enemy;
     }
 
     public override void EnterState()
     {
-        transformTime = transformDuration;
-        enemy.rb2d.gravityScale = 0f;
+
+        Henchman.Rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
+        enemy.SetVulnerable(false);
     }
 
     public override void ExitState()
     {
-        base.ExitState();
+        enemy.SetVulnerable(true);
+        Henchman.Rigidbody2D.bodyType = RigidbodyType2D.Static;
     }
 
     public override void FrameUpdate()
     {
-        if (transformTime > 0f) 
+        if (Henchman != null)
         {
-            transformTime -= Time.deltaTime;
-            enemy.animator.Play("transform");
+            AnimatorStateInfo animatorState = Henchman.Animator.GetCurrentAnimatorStateInfo(0);
+            if (Henchman.ReadyToUltimate() && !animatorState.IsName("Bounce"))
+            {
+                Henchman.Animator.SetTrigger("Ultimate");
+                Debug.Log("Into Bounce State");
+                Henchman.stateMachine.ChangeState(Henchman.HenchmanUltimateState);
+            }
+            else if (Henchman.playerInAttackRange && !animatorState.IsName("Attack"))
+            {
+                Henchman.Animator.SetTrigger("Reverse");
+                Henchman.Animator.SetTrigger("Attack");
+                Henchman.stateMachine.ChangeState(Henchman.EnemyAttackState);
+            }
+            else
+            {
+                Henchman.Animator.SetTrigger("Chase");
+            }
         }
-        else if(transformTime <= 0f)
-        {
-            transformTime = 0f;
-            SetMovement();
-        }
-    }
-
-    public void SetMovement()
-    {
-        UpdatePosition();
-        ChangeState();
     }
 
     public override void PhysicsUpdate()
     {
-        base.PhysicsUpdate();
-    }
-
-    void UpdatePosition()
-    {
-        enemy.animator.Play("run");
-
-        Vector2 moveDirection = (player.transform.position - enemy.transform.position).normalized;
-        moveDirection.y = 0f;
-        enemy.Move(moveDirection * enemy.moveSpeed);
-    }
-
-    void ChangeState()
-    {
-        #region Chase -> Idle
-        if (enemy.InRangeChaseable == false)
+        if (Henchman != null && Henchman.Animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
         {
-            enemy.rb2d.linearVelocity = Vector2.zero;
-            enemy.stateMachine.ChangeState(enemy.idleState);
+            Henchman.UpdatePosition();
         }
-        #endregion
-
-        #region Chase -> Attack
-        if (enemy.InRangeAttackable == true && enemy.attackCDTime == 0f)
-        {
-            enemy.rb2d.linearVelocity = Vector2.zero;
-            enemy.stateMachine.ChangeState(enemy.attackState);
-        }
-        #endregion
     }
 }

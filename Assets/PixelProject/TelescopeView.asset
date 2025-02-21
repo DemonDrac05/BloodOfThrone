@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6940cdda447048efa58605bd546f9920, type: 3}
+  m_Name: TelescopeView
+  m_EditorClassIdentifier: 
+  Frames:
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 7365c91031470e5478d1f104723326f1, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 04181d9670b5aed408397e0f962e8392, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 2071eb4ef49f58941891460e2df0284a, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 5b543037c06bfd4409f77b3c513afa35, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: cb4df67cd574f0d498ae863f869bfdf1, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 2a82110a0c59ff84fad4c313980cac08, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 285a72c69d0c6fb4f9dca6ee246cd577, type: 3}
+  - DelayInMs: 100
+    Sprite: {fileID: 21300000, guid: 1d983758f7427984482eb6663bef4e56, type: 3}

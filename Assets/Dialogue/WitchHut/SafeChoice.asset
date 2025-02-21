@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac2a85dbab59ff45a40fc81ba85f4b5, type: 3}
+  m_Name: SafeChoice
+  m_EditorClassIdentifier: 
+  dialogues:
+  - Character: 1
+    Text: Hmm, the proposal with the cave seems fast!
+    isQuestion: 0
+    Choices: []
+  - Character: 2
+    Text: Hmm, the proposal with the cave seems fast!
+    isQuestion: 0
+    Choices: []
+  - Character: 1
+    Text: Anyway, the forest is full of bandits and the cave will save us some time!
+    isQuestion: 0
+    Choices: []
+  - Character: 1
+    Text: Yes, we will go through the cave!
+    isQuestion: 0
+    Choices: []
+  - Character: 3
+    Text: Okay. May it be your will. I can only give you an amulet that will bring
+      you luck!
+    isQuestion: 0
+    Choices: []
+  - Character: 2
+    Text: Thank you, we will never forget your help!
+    isQuestion: 0
+    Choices: []

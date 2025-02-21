@@ -4,71 +4,50 @@ using UnityEngine;
 
 public class EnemyIdleState : EnemyState
 {
-    protected new Enemy enemy;
+    private Henchman Henchman;
 
-    private static float transformTime = 0;
-    private static float transformDuration = 1.5f;
     public EnemyIdleState(Enemy enemy, EnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
-        this.enemy = enemy;
+        if (enemy is Henchman) Henchman = (Henchman)enemy;
     }
 
     public override void EnterState()
     {
-        enemy.rb2d.linearVelocity = Vector2.zero;
+        enemy.SetVulnerable(true);
     }
 
     public override void ExitState()
     {
-        base.ExitState();
+
     }
 
     public override void FrameUpdate()
     {
-        SetIdle();
-        ChangeState();
-    }
-
-    public void SetIdle()
-    {
-        if (enemy.IsGrounded())
+        if (Henchman != null)
         {
-            enemy.rb2d.bodyType = RigidbodyType2D.Static;
-            enemy.rb2d.bodyType = RigidbodyType2D.Kinematic;
+            AnimatorStateInfo animatorState = Henchman.Animator.GetCurrentAnimatorStateInfo(0);
+            if (Henchman.ReadyToAction())
+            {
+                if (Henchman.ReadyToUltimate() && !animatorState.IsName("Bounce"))
+                {
+                    Henchman.Animator.SetTrigger("Ultimate");
+                    Henchman.stateMachine.ChangeState(Henchman.HenchmanUltimateState);
+                }
+                else if (Henchman.playerInAttackRange && !animatorState.IsName("Attack"))
+                {
+                    Henchman.Animator.SetTrigger("Attack");
+                    Henchman.stateMachine.ChangeState(Henchman.EnemyAttackState);
+                }
+                else if (!animatorState.IsName("TransformToSmokeMode"))
+                {
+                    Henchman.Animator.SetTrigger("Transform");
+                    Henchman.stateMachine.ChangeState(Henchman.HenchmanTransformState);
+                }
+            }
+            else
+            {
+                AnimatorExtensions.ResetAllTriggers(Henchman.Animator);
+            }
         }
-        if (transformTime < transformDuration)
-        {
-            transformTime += Time.deltaTime;
-            enemy.animator.Play("transform_reverse");
-        }
-        else if (transformTime >= transformDuration)
-        {
-            transformTime = transformDuration;
-            enemy.animator.Play("idle");
-        }
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
-
-    void ChangeState()
-    {
-        #region Idle -> Attack
-        if (enemy.InRangeAttackable == true && enemy.attackCDTime == 0f)
-        {
-            enemy.rb2d.linearVelocity = Vector2.zero;
-            enemy.stateMachine.ChangeState(enemy.attackState);
-        }
-        #endregion
-
-        #region Idle -> Chase
-        if (enemy.InRangeAttackable == false && enemy.InRangeChaseable == true)
-        {
-            enemy.rb2d.linearVelocity = Vector2.zero;
-            enemy.stateMachine.ChangeState(enemy.chaseState);
-        }
-        #endregion
     }
 }
